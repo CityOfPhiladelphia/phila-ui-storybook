@@ -1,46 +1,37 @@
 <template>
   <div
-    class="input-wrap input-text"
+    class="input-wrap input-textarea"
     :class="{ required: $attrs.required !== undefined }"
   >
-    <input
-      class="input"
+    <label :for="$attrs.id">{{ placeholder }}</label>
+    <textarea
+      class="textarea"
       v-bind="$attrs"
       :aria-labelledby="$attrs.id"
       :aria-required="$attrs.required !== undefined"
       :value="value"
-      :type="type"
-      :placeholder="placeholder"
       @input="$emit('input', $event.target.value)"
       @on="$listeners"
-    >
-    <label :for="$attrs.id">{{ placeholder }}</label>
+    />
   </div>
 </template>
 <script>
 export default {
-  name: "InputText",
+  name: "InputTextarea",
   inheritAttrs: false,
   props: {
-    name: {
-      type: String,
-      default: 'Field Name',
-    },
     value: {
-      type: String,
+      type: [ String, Number ],
       default: "",
-    },
-    type: {
-      type: String,
-      default: 'text',
     },
     placeholder: {
       type: String,
-      default: 'Insert placeholder here',
+      default: 'Insert label placeholder here',
     }
   },
 };
 </script>
 <style lang="scss">
-@import '../styles/InputText.scss';
+@import '../styles/InputTextarea.scss';
 </style>
+

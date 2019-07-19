@@ -7,6 +7,8 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton';
 import Welcome from './Welcome';
 import InputText from '../components/InputText';
+import InputTextarea from '../components/InputTextarea';
+
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -18,6 +20,12 @@ storiesOf('InputText', module)
   .add('Basic InputText', () => ({
     components: { InputText }, 
     template: '<input-text/>'
+  }));
+
+  storiesOf('InputTextarea', module)
+  .add('Basic InputTextarea', () => ({
+    components: { InputTextarea }, 
+    template: '<input-textarea/>'
   }));
 
 storiesOf('Button', module)
