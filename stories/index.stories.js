@@ -8,6 +8,7 @@ import MyButton from './MyButton';
 import Welcome from './Welcome';
 import InputText from '../components/InputText';
 import InputTextarea from '../components/InputTextarea';
+import InputCheckbox from '../components/InputCheckbox';
 
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
@@ -26,6 +27,12 @@ storiesOf('InputText', module)
   .add('Basic InputTextarea', () => ({
     components: { InputTextarea }, 
     template: '<input-textarea/>'
+  }));
+
+  storiesOf('InputCheckbox', module)
+  .add('Basic InputCheckbox', () => ({
+    components: { InputCheckbox }, 
+    template: '<input-checkbox>Insert checkbox label</input-checkbox>'
   }));
 
 storiesOf('Button', module)
