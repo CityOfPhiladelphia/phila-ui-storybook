@@ -4,6 +4,7 @@
     :class="{ required: $attrs.required !== undefined }"
   >
     <input
+      class="input"
       v-bind="$attrs"
       :aria-labelledby="$attrs.id"
       :aria-required="$attrs.required !== undefined"

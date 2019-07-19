@@ -1,30 +1,38 @@
-@import './functions.scss';
+// @import './functions.scss';
+$radius: 0;
+// @import '../styles/colors.scss';
+// COLORS
+$ben-franklin-blue: #2176d2;
+$dark-ben-franklin: #0f4d90;
+$light-ben-franklin: #96c9ff;
+$electric-blue: #25cef7;
 
-input {
-  display: block;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
+$bell-yellow: #f3c613;
+$light-bell: #ffefa2;
 
-  height: rem-calc(40);
-  margin: 0 0 rem-calc(10);
-  padding: rem-calc(12);
+$pride-purple:#9400c6;
+$punk-pink: #dd2662;
 
-  border: 0;
-  border-radius: 0;
-  background-color: #f0f0f0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: rem-calc(16);
-  font-weight: normal;
-  line-height: 1.5;
-  color: color(dark-grey);
-  -webkit-transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
-  transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
-  transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
-  transition: box-shadow 0.5s,border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+$phanatic-green: #3a833c;
+$kelly-drive-green: #58c04d;
+$light-kelly-drive: #b9f2b1;
+
+$flyers-orange: #f99300;
+$love-park-red: #cc3000;
+$light-red: #fed0d0;
+$light-blue: #daedfe;
+
+$dark-gray: #444;
+$medium-gray: #a1a1a1;
+$sidewalk: #cfcfcf;
+$ghost-gray: #f0f0f0;
+
+// INPUT OVERRIDES
+$input-background-color: $ghost-gray;
+$input-focus-box-shadow-size: none;
+$input-border-color: transparent;
+$input-hover-border-color: transparent;
+$input-focus-border-color: $electric-blue; 
+$input-shadow: none;
+@import "../node_modules/bulma/bulma.sass";
+

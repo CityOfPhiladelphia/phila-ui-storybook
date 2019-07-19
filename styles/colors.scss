@@ -29,15 +29,15 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
-@each $value in $colors {
-  //sass-lint:disable-block no-important
-  .#{nth($value, 1)} {
-    color: nth($value, 2) !important;
-  }
-  .bg-#{nth($value, 1)} {
-    background-color: nth($value, 2) !important;
-  }
-  .bdr-#{nth($value, 1)} {
-    border-color: nth($value, 2) !important;
-  }
-}
+// @each $value in $colors {
+//   //sass-lint:disable-block no-important
+//   .#{nth($value, 1)} {
+//     color: nth($value, 2) !important;
+//   }
+//   .bg-#{nth($value, 1)} {
+//     background-color: nth($value, 2) !important;
+//   }
+//   .bdr-#{nth($value, 1)} {
+//     border-color: nth($value, 2) !important;
+//   }
+// }
