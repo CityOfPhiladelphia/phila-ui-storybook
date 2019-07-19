@@ -9,13 +9,13 @@ import Welcome from './Welcome';
 import InputText from '../components/InputText';
 import InputTextarea from '../components/InputTextarea';
 import InputCheckbox from '../components/InputCheckbox';
-
+import InputRadio from '../components/InputRadio';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
   methods: { action: linkTo('Button') },
-}));
+  }));
 
 storiesOf('InputText', module)
   .add('Basic InputText', () => ({
@@ -23,16 +23,22 @@ storiesOf('InputText', module)
     template: '<input-text/>'
   }));
 
-  storiesOf('InputTextarea', module)
+storiesOf('InputTextarea', module)
   .add('Basic InputTextarea', () => ({
     components: { InputTextarea }, 
     template: '<input-textarea/>'
   }));
 
-  storiesOf('InputCheckbox', module)
+storiesOf('InputCheckbox', module)
   .add('Basic InputCheckbox', () => ({
     components: { InputCheckbox }, 
     template: '<input-checkbox>Insert checkbox label</input-checkbox>'
+  }));
+
+storiesOf('InputRadio', module)
+  .add('Basic InputRadio', () => ({
+    components: { InputRadio }, 
+    template: '<input-radio>Insert radio label</input-radio>'
   }));
 
 storiesOf('Button', module)
