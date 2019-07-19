@@ -10,6 +10,9 @@ import InputText from '../components/InputText';
 import InputTextarea from '../components/InputTextarea';
 import InputCheckbox from '../components/InputCheckbox';
 import InputRadio from '../components/InputRadio';
+import InputSelect from '../components/InputSelect';
+
+let myOptions = {my:"options"}
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -39,6 +42,12 @@ storiesOf('InputRadio', module)
   .add('Basic InputRadio', () => ({
     components: { InputRadio }, 
     template: '<input-radio>Insert radio label</input-radio>'
+  }));
+
+  storiesOf('InputSelect', module)
+  .add('Basic InputSelect', () => ({
+    components: { InputSelect }, 
+    template: '<input-select/>'
   }));
 
 storiesOf('Button', module)
