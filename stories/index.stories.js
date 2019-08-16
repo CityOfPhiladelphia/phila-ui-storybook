@@ -6,6 +6,11 @@ import { linkTo } from '@storybook/addon-links';
 
 import MyButton from './MyButton';
 import Welcome from './Welcome';
+
+// LAYOUT PARTS
+import PhlHeader from '../components/Header';
+
+// FROMS
 import InputText from '../components/InputText';
 import InputTextarea from '../components/InputTextarea';
 import InputCheckbox from '../components/InputCheckbox';
@@ -20,6 +25,18 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
   methods: { action: linkTo('Button') },
   }));
 
+// LAYOUT PARTS
+storiesOf('Header', module)
+  .add('Header Bar', () => ({
+    components: { PhlHeader }, 
+    template: `
+      <phl-header app-subtitle="StoryBook" app-title="City Of Philadelphia Vue Standards">
+        Navigation (Slot Content)
+      </phl-header>
+    `
+  }));
+
+// FORMS
 storiesOf('InputText', module)
   .add('Basic InputText', () => ({
     components: { InputText }, 

@@ -9,7 +9,15 @@ module.exports = async ({ config, mode }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push({
     test: /\.scss$/,
-    use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+    use: ['vue-style-loader', 'css-loader', {
+      'loader': 'sass-loader',
+      options: {
+        data: `
+          @import "../styles/functions.scss";
+          @import "../styles/colors.scss";
+        `
+      }
+    }],
     include: path.resolve(__dirname, '../'),
   });
 
