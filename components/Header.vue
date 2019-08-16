@@ -35,8 +35,9 @@
                 {{ appTitle }}
               </h1>
               <h2
+                v-if="appSubtitle"
                 class="is-size-5"
-                v-if="appSubtitle">{{ appSubtitle }}
+              >{{ appSubtitle }}
               </h2>
             </a>
           </div>
@@ -86,7 +87,7 @@ export default {
     fluid: {
       type: Boolean,
       default: true,
-    }
+    },
   },
   data() {
     return {
