@@ -30,7 +30,7 @@ export default {
   },
   props: {
     id: {
-      type: String,
+      type: [ String, Number ],
       default: () => `ck_${String(Math.random().toString(36).substr(2, 9))}`,
     },
     value: {
