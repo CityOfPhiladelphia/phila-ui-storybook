@@ -31,7 +31,7 @@ export default {
   props: {
     id: {
       type: String,
-      default: () => `ck_${String(Math.random().toString(36).substr(2, 9))}`,
+      default: () => `cb_${Math.random().toString(12).substring(2, 8)}`,
     },
     value: {
       type: [ String, Number, Boolean ],
