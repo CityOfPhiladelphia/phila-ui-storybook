@@ -8,3 +8,8 @@ City of Philadelphia Vue UI Components
 - Run `npm install`
 - Run `npm run storybook`
 - Navigate to the printed local URL.
+
+
+## LICENSE
+
+[MIT](LICENSE)

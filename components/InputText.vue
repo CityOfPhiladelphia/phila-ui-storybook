@@ -22,10 +22,6 @@ export default {
   name: "InputText",
   inheritAttrs: false,
   props: {
-    name: {
-      type: String,
-      default: 'Field Name',
-    },
     value: {
       type: String,
       default: "",
