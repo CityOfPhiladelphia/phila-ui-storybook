@@ -1,0 +1,23 @@
+.progress-container {
+  margin: 0.5rem 0;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  
+  .progress{
+    border-radius: 0;
+    height: 2rem;
+    position: relative;
+    &:before{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    &:after {
+      content: attr(value)'%';
+      position: absolute;
+      top: calc(50% - 10px);
+      color: white;
+      padding: 0 1rem;
+    }
+  }
+}

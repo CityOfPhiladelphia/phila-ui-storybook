@@ -16,6 +16,8 @@ import InputTextarea from '../components/InputTextarea';
 import InputCheckbox from '../components/InputCheckbox';
 import InputRadio from '../components/InputRadio';
 import InputSelect from '../components/InputSelect';
+import ProgressBar from '../components/ProgressBar';
+import StepIndicator from '../components/StepIndicator';
 
 let myOptions = {my:"options"}
 
@@ -61,10 +63,22 @@ storiesOf('InputRadio', module)
     template: '<input-radio>Insert radio label</input-radio>'
   }));
 
-  storiesOf('InputSelect', module)
+storiesOf('InputSelect', module)
   .add('Basic InputSelect', () => ({
     components: { InputSelect }, 
     template: '<input-select/>'
+  }));
+
+storiesOf('ProgressBar', module)
+  .add('Basic ProgressBar', () => ({
+    components: { ProgressBar }, 
+    template: '<progress-bar id="test"/>'
+  }));
+
+storiesOf('StepIndicator', module)
+  .add('Basic StepIndicator', () => ({
+    components: { StepIndicator }, 
+    template: '<step-indicator id="test"/>'
   }));
 
 storiesOf('Button', module)
