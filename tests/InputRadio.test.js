@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import InputRadio from  '../components/InputRadio.vue';
+import InputRadio from  'phila-ui/src/components/InputRadio';
 
 
 describe('InputRadio', () => {

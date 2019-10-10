@@ -7,15 +7,10 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton';
 import Welcome from './Welcome';
 
-// LAYOUT PARTS
-import PhlHeader from '../components/Header';
-
 // FROMS
-import InputText from '../components/InputText';
-import InputTextarea from '../components/InputTextarea';
-import InputCheckbox from '../components/InputCheckbox';
-import InputRadio from '../components/InputRadio';
-import InputSelect from '../components/InputSelect';
+// import InputText from '../components/InputText';
+// import PhilaUI from 'phila-ui';
+import PhilaUI from 'phila-ui';
 
 let myOptions = {my:"options"}
 
@@ -28,7 +23,7 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
 // LAYOUT PARTS
 storiesOf('Header', module)
   .add('Header Bar', () => ({
-    components: { PhlHeader }, 
+    components: { 'PhlHeader': PhilaUI.Header }, 
     template: `
       <phl-header app-subtitle="StoryBook" app-title="City Of Philadelphia Vue Standards">
         Navigation (Slot Content)
@@ -39,31 +34,31 @@ storiesOf('Header', module)
 // FORMS
 storiesOf('InputText', module)
   .add('Basic InputText', () => ({
-    components: { InputText }, 
+    components: { 'InputText': PhilaUI.InputText }, 
     template: '<input-text/>'
   }));
 
 storiesOf('InputTextarea', module)
   .add('Basic InputTextarea', () => ({
-    components: { InputTextarea }, 
+    components: { 'InputTextarea': PhilaUI.InputTextarea }, 
     template: '<input-textarea/>'
   }));
 
 storiesOf('InputCheckbox', module)
   .add('Basic InputCheckbox', () => ({
-    components: { InputCheckbox }, 
+    components: { 'InputCheckbox': PhilaUI.InputCheckbox }, 
     template: '<input-checkbox>Insert checkbox label</input-checkbox>'
   }));
 
 storiesOf('InputRadio', module)
   .add('Basic InputRadio', () => ({
-    components: { InputRadio }, 
+    components: { 'InputRadio': PhilaUI.InputRadio }, 
     template: '<input-radio>Insert radio label</input-radio>'
   }));
 
   storiesOf('InputSelect', module)
   .add('Basic InputSelect', () => ({
-    components: { InputSelect }, 
+    components: { 'InputSelect': PhilaUI.InputSelect }, 
     template: '<input-select/>'
   }));
 

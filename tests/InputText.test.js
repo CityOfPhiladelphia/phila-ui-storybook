@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import InputText from  '../components/InputText.vue';
+import InputText from  'phila-ui/src/components/InputText';
 
 
 describe('InputText', () => {
