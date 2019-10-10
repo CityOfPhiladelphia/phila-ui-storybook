@@ -1,10 +1,9 @@
 import { mount } from '@vue/test-utils';
-import InputRadio from  'phila-ui/src/components/InputRadio';
-
+import PhilaUI from  'phila-ui';
 
 describe('InputRadio', () => {
   it('renders the correct markup', () => {
-    const wrapper = mount(InputRadio);
+    const wrapper = mount(PhilaUI.InputRadio);
     expect(wrapper.find('input[type=radio]').exists()).toEqual(true);
   });
 });

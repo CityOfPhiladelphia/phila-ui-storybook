@@ -8,8 +8,6 @@ import MyButton from './MyButton';
 import Welcome from './Welcome';
 
 // FROMS
-// import InputText from '../components/InputText';
-// import PhilaUI from 'phila-ui';
 import PhilaUI from 'phila-ui';
 
 let myOptions = {my:"options"}
