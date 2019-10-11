@@ -8,7 +8,7 @@ import MyButton from './MyButton';
 import Welcome from './Welcome';
 
 // FROMS
-import PhilaUI from 'phila-ui';
+import * as PhilaUI from 'phila-ui';
 
 let myOptions = {my:"options"}
 
@@ -19,46 +19,43 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
   }));
 
 // LAYOUT PARTS
-storiesOf('Header', module)
+storiesOf('Layout', module)
   .add('Header Bar', () => ({
-    components: { 'PhlHeader': PhilaUI.Header }, 
+    components: { 'AppHeader': PhilaUI.AppHeader }, 
     template: `
-      <phl-header app-subtitle="StoryBook" app-title="City Of Philadelphia Vue Standards">
+      <app-header app-subtitle="StoryBook" app-title="City Of Philadelphia Vue Standards">
         Navigation (Slot Content)
-      </phl-header>
+      </app-header>
     `
-  }));
+  }))
+  .add('Footer Bar', () => ({
+    components: { 'AppFooter': PhilaUI.AppFooter }, 
+    template: `
+      <i>Sorry, still working on this...</i>
+    `
+  }))
 
-// FORMS
-storiesOf('InputText', module)
-  .add('Basic InputText', () => ({
-    components: { 'InputText': PhilaUI.InputText }, 
-    template: '<input-text/>'
-  }));
-
-storiesOf('InputTextarea', module)
-  .add('Basic InputTextarea', () => ({
-    components: { 'InputTextarea': PhilaUI.InputTextarea }, 
-    template: '<input-textarea/>'
-  }));
-
-storiesOf('InputCheckbox', module)
-  .add('Basic InputCheckbox', () => ({
-    components: { 'InputCheckbox': PhilaUI.InputCheckbox }, 
-    template: '<input-checkbox>Insert checkbox label</input-checkbox>'
-  }));
-
-storiesOf('InputRadio', module)
-  .add('Basic InputRadio', () => ({
-    components: { 'InputRadio': PhilaUI.InputRadio }, 
-    template: '<input-radio>Insert radio label</input-radio>'
-  }));
-
-  storiesOf('InputSelect', module)
-  .add('Basic InputSelect', () => ({
-    components: { 'InputSelect': PhilaUI.InputSelect }, 
-    template: '<input-select/>'
-  }));
+  storiesOf('Inputs', module)
+    .add('Basic Textbox', () => ({
+      components: { 'Textbox': PhilaUI.Textbox }, 
+      template: '<textbox />'
+    }))
+    .add('Basic TextArea', () => ({
+      components: { 'TextArea': PhilaUI.TextArea }, 
+      template: '<text-area />'
+    }))
+    .add('Basic Checkbox', () => ({
+      components: { 'Checkbox': PhilaUI.Checkbox }, 
+      template: '<checkbox>Insert checkbox label</checkbox>'
+    }))
+    .add('Basic Radio', () => ({
+      components: { 'Radio': PhilaUI.Radio }, 
+      template: '<radio>Insert radio label</radio>'
+    }))
+    .add('Basic Dropdown', () => ({
+      components: { 'Dropdown': PhilaUI.Dropdown }, 
+      template: '<dropdown />'
+    }));
 
 storiesOf('Button', module)
   .add('with text', () => ({
