@@ -1,14 +1,14 @@
 import { mount } from '@vue/test-utils';
-import InputText from  '../components/InputText.vue';
+import { Textbox } from  'phila-ui';
 
 
 describe('InputText', () => {
   it('renders the correct markup', () => {
-    const wrapper = mount(InputText);
+    const wrapper = mount(Textbox);
     expect(wrapper.html()).toContain('<div class="input-wrap input-text">');
   });
   it('renders the placeholder text and label based on placeholder', () => {
-    const wrapper = mount(InputText, {
+    const wrapper = mount(Textbox, {
       propsData:  {
         placeholder: 'Philadelphia Sports Mascot',
         value: 'Gritty'
