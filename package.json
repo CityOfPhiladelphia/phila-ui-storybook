@@ -1,5 +1,5 @@
 {
-  "name": "phila-ui",
+  "name": "phila-ui-storybook",
   "version": "1.0.0",
   "description": "UIKit for Phila",
   "main": "index.js",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/CityOfPhiladelphia/phila-ui#readme",
   "dependencies": {
+    "phila-ui": "github:CityOfPhiladelphia/phila-ui#master",
     "vue": "^2.6.10"
   },
   "devDependencies": {
