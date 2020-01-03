@@ -7,19 +7,18 @@ module.exports = async ({ config, mode }) => {
   // 'PRODUCTION' is used when building the static version of storybook.
 
   // Make whatever fine-grained changes you need
-  // config.module.rules.push({
-  //   test: /\.scss$/,
-  //   use: ['vue-style-loader', 'css-loader', {
-  //     'loader': 'sass-loader',
-  //     options: {
-  //       data: `
-  //         @import "../styles/functions.scss";
-  //         @import "../styles/colors.scss";
-  //       `
-  //     }
-  //   }],
-  //   include: path.resolve(__dirname, '../'),
-  // });
+  config.module.rules.push({
+    test: /\.scss$/,
+    use: ['vue-style-loader', 'css-loader', {
+      'loader': 'sass-loader',
+      options: {
+        data: `
+          @import "@CityOfPhiladelphia/phila-ui/src/styles/all.scss";
+        `
+      }
+    }],
+    include: path.resolve(__dirname, '../'),
+  });
 
   // Return the altered config
   return config;
