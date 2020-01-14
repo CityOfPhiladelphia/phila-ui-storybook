@@ -8,8 +8,9 @@ import MyButton from './MyButton';
 import Welcome from './Welcome';
 
 // FROMS
-import * as PhilaUI from '@CityOfPhiladelphia/phila-ui';
-import "@CityOfPhiladelphia/phila-ui/src/styles/all.scss";
+import * as PhilaUI from '@phila/phila-ui';
+
+import "@phila/phila-ui/src/styles/all.scss";
 
 let myOptions = {my:"options"}
 

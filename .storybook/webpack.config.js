@@ -9,15 +9,14 @@ module.exports = async ({ config, mode }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push({
     test: /\.scss$/,
-    use: ['vue-style-loader', 'css-loader', {
-      'loader': 'sass-loader',
-      options: {
-        data: `
-          @import "@CityOfPhiladelphia/phila-ui/src/styles/all.scss";
-        `
+    use: [
+      'vue-style-loader',
+      'css-loader',
+      {
+        loader: 'sass-loader',
       }
-    }],
-    include: path.resolve(__dirname, '../'),
+    ],
+    // include: path.resolve(__dirname, '../'),
   });
 
   // Return the altered config

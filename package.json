@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/CityOfPhiladelphia/phila-ui#readme",
   "dependencies": {
-    "@CityOfPhiladelphia/phila-ui": "github:CityOfPhiladelphia/phila-ui#master",
+    "@phila/phila-ui": "github:CityOfPhiladelphia/phila-ui#master",
     "phila-ui": "github:CityOfPhiladelphia/phila-ui#master",
     "vue": "^2.6.10"
   },
